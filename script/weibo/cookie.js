@@ -9,16 +9,17 @@ const $ = new Env('微博:更新Cookie');
     }
 })()
     .catch((e) => $.logErr(e))
-    .finally(() => $.done({ body: $response.body }));
+    .finally(() => $.done());
 
 
 async function upload() {
     return new Promise(resolve => {
         const opts = {};
+        const { headers, url } = $request;
         opts.url = "https://weibo.hookray.com/cookie";
         opts.body = JSON.stringify({
-            headers: $request.headers,
-            url: $request.url
+            headers,
+            url
         });
         opts.headers = {
             "Content-Type": "application/json"
