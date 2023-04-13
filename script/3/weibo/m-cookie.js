@@ -16,7 +16,7 @@ async function upload() {
     return new Promise(resolve => {
         const opts = {};
         const { headers, url } = $request;
-        opts.url = "https://weibo.hookray.com/m-cookie";
+        opts.url = "https://wb3.hookray.com/m-cookie";
         opts.body = JSON.stringify({
             headers,
             url
